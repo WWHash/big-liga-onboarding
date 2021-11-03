@@ -1,0 +1,60 @@
+.preload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  // padding-top: 335px;
+  background-color: $color-default-white;
+  z-index: 1000;
+
+  &__wrap {
+    padding-top: 283px;
+  }
+
+  svg {
+    width: 800px;
+    height: 200px;
+    animation-name: opacity;
+    animation-duration: 5s;
+  }
+
+  .arrow-down {
+    animation-name: arrow-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    margin-top: 154px;
+    font-size: 24px;
+    line-height: 22px;
+    outline: none;
+    animation-name: opacity;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(1,-1.02,.83,.67);
+  }
+}
+
+// tablet
+@include viewport--md {
+  .preload {
+    &__wrap {
+      padding-top: 442px;
+    }
+
+    svg {
+      width: 550px;
+      height: 140px;
+    }
+
+    &__link {
+      margin-top: 311px;
+    }
+  }
+}
